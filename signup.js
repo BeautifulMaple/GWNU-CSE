@@ -1,16 +1,30 @@
-// Sing up - script.js
-// 취소 버튼을 클릭했을 때 login.html로 이동하는 함수
-document.getElementById("cancelBtn").addEventListener("click", function() {
-    window.location.href = "login.html";  // login.html의 경로가 다를 경우 경로 수정 필요
+document.getElementById('sendCodeBtn').addEventListener('click', function() {
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+
+    if (email && phone) {
+        alert('인증번호가 발송되었습니다.');
+        // 실제 인증번호 발송 로직 추가 (예: 이메일 또는 SMS 발송)
+    } else {
+        alert('Email과 휴대폰번호를 입력해주세요.');
+    }
 });
 
-// 회원가입 버튼을 눌렀을 때, 추가적인 유효성 검사를 할 수 있습니다.
-document.getElementById("signupForm").addEventListener("submit", function(event) {
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    if (password !== confirmPassword) {
-        alert("비밀번호가 일치하지 않습니다.");
-        event.preventDefault();  // 폼 제출을 막음
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    if (password === confirmPassword) {
+        alert('회원가입이 완료되었습니다.');
+        // 실제 회원가입 로직 추가
+    } else {
+        alert('비밀번호가 일치하지 않습니다.');
     }
+});
+
+// 뒤로가기 버튼 기능
+document.getElementById('nextBtn').addEventListener('click', function() {
+    window.location.href = 'login.html'; // signup1.html로 이동
 });

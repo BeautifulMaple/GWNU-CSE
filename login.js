@@ -6,6 +6,8 @@ document.querySelector('form').addEventListener('submit', function(event) {
 
     console.log(`Email: ${email}, Password: ${password}`);
 
+    window.location.href = "QRscan.html";
+
     // 실제로는 여기에 서버로 데이터를 전송하는 로직을 추가
 });
 
