@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     backBtn.addEventListener('click', function() {
-        window.location.href = 'login.html';
+        window.location.href = 'MainHome.html';
     });
 });
 
