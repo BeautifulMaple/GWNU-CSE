@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album</title>
+    <link rel="stylesheet" href="Album.css">
+</head>
+<body>
+    <div class="album-container">
+        <!-- 대표 사진 목록 -->
+        <aside class="thumbnail-list">
+            <h2>대표 사진</h2>
+            <div id="thumbnailGallery"></div>
+        </aside>
+
+        <!-- 저장된 사진 목록 -->
+        <main class="photo-list">
+            <h2>저장된 사진</h2>
+            <div id="photoGallery"></div>
+        </main>
+    </div>
+
+    <!-- 사진 정보 표시 -->
+    <div id="photoInfoModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close-btn">&times;</span>
+            <h3>사진 정보</h3>
+            <p id="photoInfo"></p>
+        </div>
+    </div>
+
+    <script src="Album.js"></script>
+</body>
+</html>

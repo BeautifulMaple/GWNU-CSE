@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="{% static 'oreo/css/signup1.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>마지막 단계!</h1>
+        <div class="input-group">
+            <input type="text" id="nickname" placeholder="닉네임을 입력해주세요" required>
+        </div>
+        <button id="completeSignupBtn" data-url="{% url 'login' %}">회원가입 완료!</button>
+    </div>
+    <script src="{% static 'oreo/js/signup1.js' %}"></script>
+</body>
+</html>
