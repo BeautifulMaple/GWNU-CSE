@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디 찾기</title>
+    <link rel="stylesheet" href="{% static 'oreo/css/idfind.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>아이디 찾기</h1>
+        <p>복구 이메일과 이름을 입력해주세요</p>
+        <form id="idFindForm" method="post">
+            {% csrf_token %} <!-- CSRF 토큰 추가 -->
+            <input type="text" id="name" placeholder="이름" required>
+            <input type="email" id="email" placeholder="email" required>
+            <button type="button" id="verificationBtn">인증번호 받기</button>
+            <input type="text" id="verificationCode" placeholder="인증번호 6자리 숫자 입력" required disabled>
+            <button type="button" class="find-btn" id="confirmCodeBtn" disabled>확인</button>
+            <div class="buttons">
+                <button type="button" class="find-btn" id="findIdBtn" data-url="{% url 'login' %}" disabled>아이디 찾기</button>
+                <button type="button" id="backBtn" data-url="{% url 'login' %}">뒤로가기</button>
+            </div>
+        </form>
+    </div>
+    <script src="{% static 'oreo/js/idfind.js' %}"></script>
+</body>
+</html>

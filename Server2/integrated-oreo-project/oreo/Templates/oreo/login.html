@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오레오</title>
+    <link rel="stylesheet" href="{% static 'oreo/css/login.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <h1>오레오</h1>
+        <!-- 로그인 폼 -->
+        <form id="loginForm" method="post" action="{% url 'LoginHome' %}">
+            {% csrf_token %}
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button id="loginBtn" class="login-button" type="submit">로그인</button>
+        </form>
+
+        <div class="links">
+            <button id="findIdBtn" class="link-button" data-url="{% url 'idfind' %}">아이디 찾기</button>
+            <button id="findPwBtn" class="link-button" data-url="{% url 'pwfind' %}">비밀번호 찾기</button>
+        </div>
+
+        <div class="register">
+            <p>계정이 없으신가요? <a href="#" id="signupLink" data-url="{% url 'signup' %}">회원가입</a></p>
+        </div>
+
+        <div class="social-login">
+            <button class="google-login">
+                <img src="{% static 'oreo/images/google.png' %}" alt="Google Login">
+            </button>
+            <button class="kakao-login">
+                <img src="{% static 'oreo/images/kakao.png' %}" alt="Kakao Login">
+            </button>
+        </div>
+    </div>
+    <script src="{% static 'oreo/js/login.js' %}"></script>
+</body>
+</html>
