@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Home</title>
+    <link rel="stylesheet" href="{% static 'oreo/css/oreo/loginhome.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url 'loginhome' %}">오레오</a>
+        </div>
+        <div class="top-buttons">
+            <span>{{ nickname }}님</span>
+            <a href="{% url 'logout' %}" id="logoutBtn">로그아웃</a>
+            <a href="{% url 'uplode' %}" id="uploadBtn">업로드</a>
+            <a href="{% url 'qrscan' %}" id="qrScanBtn">QR 스캔</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 앨범 섹션 -->
+        <section class="album-section">
+            <h2>My Album</h2>
+            <div id="albumGallery" class="album-gallery">
+                {% for photo in photo_data %}
+                    <div class="photo" data-description="{{ photo.description }}" data-date="{{ photo.date }}" data-sub-photos="{{ photo.sub_photos|join:',' }}">
+                        <img src="{{ photo.main_photo }}" alt="{{ photo.description }}" class="main-photo">
+                        <p class="photo-description">{{ photo.description }}</p>
+                        <p class="photo-date">{{ photo.date }}</p>
+                    </div>
+                {% empty %}
+                    <p>업로드된 사진이 없습니다.</p>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- 스토리 섹션 -->
+        <section class="story-section">
+            <h2>My Story</h2>
+            <div id="storyGallery" class="story-gallery">
+                <!-- 여기에 스토리가 동적으로 삽입됩니다. -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="actionMenu" class="action-menu hidden">
+            <button id="deleteButton">삭제</button>
+            <button id="shareButton">공유</button>
+            <button id="cancelButton">선택 취소</button>
+        </div>
+    </footer>
+    <script src="{% static 'oreo/js/oreo/loginhome.js' %}"></script>
+</body>
+</html>
