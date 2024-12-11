@@ -26,7 +26,6 @@
             <h2>My Album</h2>
             <div id="albumGallery" class="album-gallery">
                 {% for photo in photo_data %}
-<<<<<<< HEAD
                     <div class="photo" 
                         data-id="{{ photo.id }}" 
                         data-description="{{ photo.text }}" 
@@ -35,12 +34,6 @@
                         <img src="{{ photo.main_photo }}" 
                              alt="메인 사진" 
                              class="main-photo">
-=======
-                    <div class="photo" data-description="{{ photo.description }}" data-date="{{ photo.date }}" data-sub-photos="{{ photo.sub_photos|join:',' }}">
-                        <img src="{{ photo.main_photo }}" alt="{{ photo.description }}" class="main-photo">
-                        <p class="photo-description">{{ photo.description }}</p>
-                        <p class="photo-date">{{ photo.date }}</p>
->>>>>>> origin/develop_KTG
                     </div>
                 {% empty %}
                     <p>업로드된 사진이 없습니다.</p>

@@ -36,13 +36,10 @@ ACCOUNT_LOGOUT_ON_GET = True
 
 # 세션 데이터를 저장하는 백엔드 설정 
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
-<<<<<<< HEAD
 SESSION_COOKIE_AGE = 86400  # 24시간
 SESSION_SAVE_EVERY_REQUEST = True
 SESSION_COOKIE_SECURE = True  # HTTPS 사용 시 True로 변경
 SESSION_COOKIE_HTTPONLY = True
-=======
->>>>>>> origin/develop_KTG
 
 # Application definition
 
@@ -90,10 +87,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware'
-<<<<<<< HEAD
     
-=======
->>>>>>> origin/develop_KTG
 ]
 
 ROOT_URLCONF = 'capston.urls'
@@ -208,15 +202,11 @@ EMAIL_HOST_USER = 'xorua4510@naver.com'  # 발신자 이메일 주소
 EMAIL_HOST_PASSWORD = 'S8NY1E4R4JVV'  # 이메일 비밀번호
 EMAIL_USE_SSL = False  # 이미 EMAIL_USE_TLS가 True로 설정됨
 
-<<<<<<< HEAD
 
 # 로그인 관련 설정 추가
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/loginhome/'
 LOGOUT_REDIRECT_URL = '/login/'
-=======
-LOGIN_URL = '/login_data/'  # 로그인 URL 설정
->>>>>>> origin/develop_KTG
 
 
 CACHES = {

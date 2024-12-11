@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Login attempt - Email: xorua4510@gmail.com
 Login successful for email: xorua4510@gmail.com
 Login attempt - Email: xorua4510@gmail.com
@@ -257,20 +256,3 @@ Login attempt - Email: xorua4510@gmail.com
 Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
 Login successful - Email: xorua4510@gmail.com
 Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
-=== Upload Process Start ===
-Files in request: dict_keys(['repFile', 'files'])
-RepFile: 4.jpg
-SubFiles: [<InMemoryUploadedFile: 6.jpg (image/jpeg)>]
-Date: 2024-12-11
-Description: test
-User email from session: xorua4510@gmail.com
-Found user profile: xorua4510@gmail.com
-Creating MainPhoto...
-MainPhoto created: 6
-Processing sub photo: 6.jpg
-SubPhoto created: 6
-=== Upload Process Complete ===
-=======
-Login attempt - Email: xorua4510@gmail.com
-Login successful for email: xorua4510@gmail.com
->>>>>>> origin/develop_KTG

@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     loginForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
-<<<<<<< HEAD
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
@@ -19,16 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 email: email,
                 password: password
             })
-=======
-        const formData = new FormData(this);
-        
-        fetch('/login_data/', {
-            method: 'POST',
-            headers: {
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
-            },
-            body: formData
->>>>>>> origin/develop_KTG
         })
         .then(response => response.json())
         .then(data => {

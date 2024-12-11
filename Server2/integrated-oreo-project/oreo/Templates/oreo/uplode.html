@@ -8,27 +8,20 @@
     <link rel="stylesheet" href="{% static 'oreo/css/oreo/uplode.css' %}">
 </head>
 <body>
-<<<<<<< HEAD
     <!-- 로그인 상태 확인을 위한 hidden input -->
     <input type="hidden" id="isAuthenticated" value="{{ user.is_authenticated|lower }}">
 
-=======
->>>>>>> origin/develop_KTG
     <div class="uplode-container">
         <h1>파일 업로드</h1>
         <form id="uplodeForm" method="post" action="{% url 'uplode_photo' %}" enctype="multipart/form-data">
             {% csrf_token %}
-<<<<<<< HEAD
             
             <!-- 대표 사진 미리보기 영역 -->
-=======
->>>>>>> origin/develop_KTG
             <div id="previewContainer">
                 <p>대표 사진 미리보기:</p>
                 <img id="repPreview" src="" alt="대표 사진 미리보기" class="hidden">
             </div>
 
-<<<<<<< HEAD
             <!-- 파일 입력 필드들 -->
             <div class="file-input-group">
                 <label for="repFileInput" class="custom-file-uplode">대표 사진 선택</label>
@@ -56,24 +49,6 @@
 
         <!-- 뒤로가기 버튼 -->
         <button type="button" id="backBtn" data-url="{% url 'loginhome' %}" class="back-btn">뒤로가기</button>
-=======
-            <label for="repFileInput" class="custom-file-uplode">대표 사진 선택</label>
-            <input type="file" id="repFileInput" accept="image/*" required>
-
-            <label for="fileInput" class="custom-file-uplode">파일 선택 (사진 또는 동영상)</label>
-            <input type="file" id="fileInput" accept="image/*, video/*" multiple required>
-
-            <label for="dateInput">날짜:</label>
-            <input type="date" id="dateInput" required>
-
-            <label for="descriptionInput">사진 설명:</label>
-            <textarea id="descriptionInput" placeholder="사진 설명을 입력하세요..." required></textarea>
-
-            <button type="submit">업로드</button>
-        </form>
-
-        <button type="button" id="backBtn" data-url="{% url 'loginhome' %}">뒤로가기</button>
->>>>>>> origin/develop_KTG
     </div>
 
     <script src="{% static 'oreo/js/oreo/uplode.js' %}"></script>
