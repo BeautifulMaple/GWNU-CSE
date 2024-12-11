@@ -55,7 +55,10 @@ urlpatterns = [
     path('main-photo/user/<int:user_id>/', MainPhotoView.as_view(), name='main-photo-by-user'),
     path('sub-photo/<int:pk>/', SubPhotoView.as_view(), name='sub-photo-detail'),
     path('sub-photo/main/<int:main_photo_id>/', SubPhotoView.as_view(), name='sub-photo-by-main'),
+<<<<<<< HEAD
     path('delete_photo/', views.delete_photo, name='delete_photo'),
+=======
+>>>>>>> origin/develop_KTG
 
     # 소셜 로그인
     path('accounts/', include('allauth.urls')),

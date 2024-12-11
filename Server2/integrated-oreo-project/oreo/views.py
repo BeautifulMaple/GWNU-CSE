@@ -3,7 +3,10 @@ import json
 import random
 import string
 import requests
+<<<<<<< HEAD
 import logging
+=======
+>>>>>>> origin/develop_KTG
 
 # Django 기본 라이브러리
 from django.shortcuts import render, redirect
@@ -12,7 +15,11 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist, ValidationError
 from django.core.mail import send_mail
 from django.core.validators import URLValidator
+<<<<<<< HEAD
 from django.contrib.auth.hashers import make_password, check_password
+=======
+from django.contrib.auth.hashers import make_password
+>>>>>>> origin/develop_KTG
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.core.cache import cache
@@ -30,13 +37,18 @@ def mainhome(request):
     return render(request, 'oreo/mainhome.html')
 
 # 로그인 후 홈 화면
+<<<<<<< HEAD
 # @login_required 데코레이터 제거
+=======
+@login_required
+>>>>>>> origin/develop_KTG
 def loginhome_view(request):
     """
     로그인 후 메인 홈 화면을 보여주는 뷰
     - 사용자의 프로필 정보 표시
     - 사용자의 메인/서브 사진들 표시
     """
+<<<<<<< HEAD
     # 세션 체크
     if request.session.get('is_authenticated'):
         user_email = request.session.get('user_email')
@@ -90,6 +102,67 @@ def loginhome_view(request):
 #         return render(request, 'oreo/loginhome.html', {'photos_data': photos_data})
 #     except UserProfile.DoesNotExist:
 #         return redirect('login')
+=======
+    try:
+        # 세션에서 이메일 가져오기
+        user_email = request.session.get('user_email')
+        
+        # UserProfile 가져오기
+        user_profile = UserProfile.objects.get(email=user_email)
+        nickname = user_profile.nickname
+        
+        # MainPhoto와 연결된 SubPhoto 가져오기
+        main_photos = MainPhoto.objects.filter(user_profile=user_profile)
+        
+        # 데이터 구조화
+        photo_data = []
+        for main_photo in main_photos:
+            sub_photos = SubPhoto.objects.filter(main_photo=main_photo)
+            photo_data.append({
+                "main_photo": main_photo.file.url,
+                "description": main_photo.text,
+                "date": main_photo.date,
+                "sub_photos": [sub.file.url for sub in sub_photos]
+            })
+
+        context = {
+            'nickname': nickname,
+            'photo_data': photo_data,
+        }
+        
+        return render(request, 'oreo/loginhome.html', context)
+        
+    except UserProfile.DoesNotExist:
+        logger.error("UserProfile does not exist for the email.")
+        return JsonResponse({'error': '사용자 프로필을 찾을 수 없습니다.'}, status=404)
+    except Exception as e:
+        logger.error(f"Error in loginhome_view: {str(e)}")
+        return JsonResponse({'error': '페이지를 불러오는데 실패했습니다.'}, status=500)
+    
+
+    
+
+def login_home(request):
+    user_profile = request.user.userprofile  # 로그인한 사용자 프로필 가져오기
+    
+    main_photos = MainPhoto.objects.filter(user_profile=user_profile)  # 메인 사진 조회
+
+    # 서브 사진을 각 메인 사진에 연결
+    photo_data = []
+    for main_photo in main_photos:
+        sub_photos = SubPhoto.objects.filter(main_photo=main_photo)
+        photo_data.append({
+            "main_photo": main_photo.file.url,
+            "description": main_photo.text,
+            "date": main_photo.date,
+            "sub_photos": [sub.file.url for sub in sub_photos]
+        })
+
+    context = {
+        'photo_data': photo_data,  # 조회된 데이터를 템플릿으로 전달
+    }
+    return render(request, 'oreo/loginhome.html', context)
+>>>>>>> origin/develop_KTG
 
 
 # 로그인 페이지
@@ -101,6 +174,7 @@ import logging  # 파일 상단에 추가
 # 로거 설정
 logger = logging.getLogger(__name__)
 
+<<<<<<< HEAD
 # 로그인
 @csrf_exempt
 def login_data(request):
@@ -134,6 +208,24 @@ def login_data(request):
                 
                 return JsonResponse({
                     'success': True,
+=======
+def login_data(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        
+        logger.info(f"Login attempt - Email: {email}")
+        
+        try:
+            user_profile = UserProfile.objects.get(email=email)
+            
+            if user_profile.check_password(password):
+                request.session['user_email'] = email
+                request.session['user_nickname'] = user_profile.nickname
+                logger.info(f"Login successful for email: {email}")
+                return JsonResponse({
+                    'success': True, 
+>>>>>>> origin/develop_KTG
                     'redirect_url': '/loginhome/'
                 })
             else:
@@ -143,6 +235,7 @@ def login_data(request):
                 }, status=400)
                 
         except UserProfile.DoesNotExist:
+<<<<<<< HEAD
             logger.warning(f"UserProfile not found - Email: {email}")
             return JsonResponse({
                 'error': '등록되지 않은 이메일입니다.'
@@ -155,6 +248,13 @@ def login_data(request):
     
     return JsonResponse({'error': '잘못된 요청입니다.'}, status=405)
     
+=======
+            logger.warning(f"No user found with email: {email}")
+            return JsonResponse({
+                'error': '등록되지 않은 이메일입니다.'
+            }, status=400)
+        
+>>>>>>> origin/develop_KTG
 
 def process_login(request):
     if request.method == 'POST':
@@ -273,6 +373,7 @@ def signup1_view(request):
     return render(request, 'oreo/signup1.html')
 
 # 파일 업로드 페이지
+<<<<<<< HEAD
 # @login_required 데코레이터 제거
 def uplode_view(request):
     """
@@ -394,6 +495,43 @@ def uplode_photo(request):
             return JsonResponse({"error": str(e)}, status=400)
 
     return JsonResponse({"error": "잘못된 요청입니다."}, status=400)
+=======
+def uplode_view(request):
+    return render(request, 'oreo/uplode.html')
+
+
+@login_required
+def uplode_photo(request):
+    if request.method == 'POST':
+        user_profile = request.user  # UserProfile 객체를 직접 사용
+
+        # 데이터 가져오기
+        rep_file = request.FILES.get('repFile')
+        sub_files = request.FILES.getlist('files')
+        date = request.POST.get('date')
+        description = request.POST.get('description')
+
+        if not rep_file or not date or not description:
+            return JsonResponse({"message": "모든 필드가 필요합니다."}, status=400)
+        
+        # MainPhoto 저장
+        main_photo = MainPhoto.objects.create(
+            user_profile=user_profile,  # user_profile 직접 사용
+            file=rep_file,
+            text=description,
+            date=date
+        )
+
+        # SubPhotos 저장
+        for file in sub_files:
+            SubPhoto.objects.create(
+                main_photo=main_photo,
+                file=file
+            )
+
+        return JsonResponse({"message": "업로드 성공!"}, status=201)
+    return JsonResponse({"message": "잘못된 요청입니다."}, status=400)
+>>>>>>> origin/develop_KTG
 
 # 사진 데이터 가져오기
 def album_data(request):
@@ -418,6 +556,7 @@ def album_data(request):
 
 
 # 예시: 현재 로그인한 사용자에 해당하는 사진만 조회
+<<<<<<< HEAD
 def get_user_photos(request):
     if not request.session.get('is_authenticated'):
         return JsonResponse({'error': '로그인이 필요합니다.'}, status=401)
@@ -453,10 +592,41 @@ def get_user_photos(request):
         })
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=400)
+=======
+@login_required
+def get_user_photos(request):
+    user_profile = request.user.userprofile  # 현재 사용자의 UserProfile을 가져옴
+    main_photos = MainPhoto.objects.filter(user_profile=user_profile)  # 해당 사용자의 MainPhoto 조회
+    sub_photos = SubPhoto.objects.filter(main_photo__user_profile=user_profile)  # 해당 사용자의 SubPhoto 조회
+    
+    # main_photos와 sub_photos에 대한 데이터를 반환
+    main_photos_data = []
+    for photo in main_photos:
+        main_photos_data.append({
+            "file_url": photo.file.url,
+            "thumbnail_url": photo.thumbnail_url(),  # 썸네일 URL 추가
+            "text": photo.text,
+            "date": photo.date,
+            "description": photo.description
+        })
+
+    sub_photos_data = []
+    for sub_photo in sub_photos:
+        sub_photos_data.append({
+            "file_url": sub_photo.file.url,
+            "text": sub_photo.text,
+        })
+
+    return JsonResponse({
+        "main_photos": main_photos_data, 
+        "sub_photos": sub_photos_data
+    })
+>>>>>>> origin/develop_KTG
 
 
 
 # 사진 삭제
+<<<<<<< HEAD
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from .models import MainPhoto, SubPhoto
@@ -518,6 +688,22 @@ def delete_photo(request):
             return JsonResponse({'error': str(e)}, status=500)
 
     return JsonResponse({'error': '잘못된 요청입니다.'}, status=405)
+=======
+def delete_photo(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        album_index = data.get('albumIndex')
+        photo_index = data.get('photoIndex')
+
+        # 앨범 및 사진 삭제 로직 작성
+        # 예: 데이터베이스에서 특정 사진 삭제
+        success = True  # 성공 여부
+
+        if success:
+            return JsonResponse({'success': True})
+        else:
+            return JsonResponse({'success': False}, status=400)
+>>>>>>> origin/develop_KTG
         
 # QR 스캔 페이지
 def qrscan_view(request):
@@ -627,11 +813,19 @@ def register_user_step1(request):
             hashed_password = make_password(password)
             logger.info(f"Hashed password during registration: {hashed_password}")
 
+<<<<<<< HEAD
             # UserProfile 생성
             user_profile = UserProfile.objects.create(
                 email=email,
                 password=hashed_password,
                 real_name=real_name
+=======
+            # 사용자 생성
+            user_profile = UserProfile.objects.create(
+                email=email,
+                password=hashed_password,  # 해시화된 비밀번호 저장
+                real_name=real_name,
+>>>>>>> origin/develop_KTG
             )
             
             logger.info(f"User created successfully with email: {email}")

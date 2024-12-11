@@ -4,7 +4,14 @@ import os
 from os.path import exists
 import uuid
 from django.contrib.auth.models import User
+<<<<<<< HEAD
 from django.utils import timezone  # 현재 날짜를 가져오기 위해 추가
+=======
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFill
+from django.utils import timezone  # 현재 날짜를 가져오기 위해 추가
+from django.contrib.auth.models import AbstractUser
+>>>>>>> origin/develop_KTG
 
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -37,7 +44,10 @@ def user_sub_photo_path(instance, filename):
 
 
 class UserProfile(models.Model):
+<<<<<<< HEAD
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+=======
+>>>>>>> origin/develop_KTG
     email = models.EmailField(unique=True, blank=True)
     password = models.CharField(max_length=128)
     nickname = models.CharField(max_length=50, unique=True, blank=True)
@@ -63,9 +73,14 @@ class UserProfile(models.Model):
 
 class MainPhoto(models.Model):
     user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name='main_photos')
+<<<<<<< HEAD
     file = models.FileField(upload_to=user_main_photo_path)  # 여기를 수정
     text = models.TextField(blank=True, null=True)  # 설명 텍스트
     date = models.DateField(auto_now_add=True)
+=======
+    file = models.FileField(upload_to='main_photos/')
+    text = models.TextField(blank=True, null=True)  # 설명 텍스트
+>>>>>>> origin/develop_KTG
 
     def delete(self, *args, **kwargs):
         # 파일도 삭제
@@ -76,9 +91,14 @@ class MainPhoto(models.Model):
 
 class SubPhoto(models.Model):
     main_photo = models.ForeignKey(MainPhoto, on_delete=models.CASCADE, related_name='sub_photos')
+<<<<<<< HEAD
     file = models.ImageField(upload_to=user_sub_photo_path)  # 여기를 수정
     text = models.TextField(blank=True, null=True)  # 설명 텍스트
     date = models.DateField(auto_now_add=True)
+=======
+    file = models.ImageField(upload_to='sub_photos/')
+    text = models.TextField(blank=True, null=True)  # 설명 텍스트
+>>>>>>> origin/develop_KTG
 
     def delete(self, *args, **kwargs):
         # 파일도 삭제

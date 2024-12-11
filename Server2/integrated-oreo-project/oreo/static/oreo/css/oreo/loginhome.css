@@ -42,6 +42,7 @@ header {
 }
 
 /* My Album 스타일 */
+<<<<<<< HEAD
 .album-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -110,6 +111,68 @@ header {
 
 .sub-photo:hover {
     transform: scale(1.05);
+=======
+.album-gallery, .story-gallery {
+    display: flex;
+    overflow-x: auto; /* 가로 스크롤 허용 */
+    gap: 15px;
+    padding: 10px;
+    scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
+}
+
+.album-gallery::-webkit-scrollbar,
+.story-gallery::-webkit-scrollbar {
+    display: none; /* Chrome, Safari에서 스크롤바 숨기기 */
+}
+
+/* 스크롤바 사용자 정의 */
+.album-gallery::-webkit-scrollbar,
+.story-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.album-gallery::-webkit-scrollbar-thumb,
+.story-gallery::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 4px;
+}
+
+.album-gallery::-webkit-scrollbar-thumb:hover,
+.story-gallery::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+}
+
+.album-item, .story-photo {
+    flex: 0 0 auto; /* 고정 크기와 가로 정렬 */
+    text-align: center;
+}
+
+.album-thumbnail, .story-photo {
+    width: 250px;  /* 메인 사진과 서브 사진 크기 동일 */
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-thumbnail:hover, .story-photo:hover {
+    transform: scale(1.05); /* 확대 효과 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.album-thumbnail.selected {
+    outline: 3px solid #007bff;
+    border-radius: 8px;
+}
+
+.album-date {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+>>>>>>> origin/develop_KTG
 }
 
 /* 섹션 제목 스타일 */
@@ -261,6 +324,7 @@ header {
 
 /* 메인 사진 */
 .main-photo {
+<<<<<<< HEAD
     max-width: 300px;  /* 최대 너비 제한 */
     width: 100%;      /* 반응형을 위한 너비 설정 */
     height: auto;     /* 비율 유지 */
@@ -275,11 +339,20 @@ header {
     .main-photo {
         max-width: 100%;  /* 모바일에서는 화면 너비에 맞춤 */
     }
+=======
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+>>>>>>> origin/develop_KTG
 }
 
 /* 서브 사진 */
 .sub-photo {
+<<<<<<< HEAD
     max-width: 200px;
+=======
+    max-width: 100px;
+>>>>>>> origin/develop_KTG
     height: auto;
     margin: 5px;
     border-radius: 5px;
@@ -293,6 +366,7 @@ header {
     justify-content: center;
 }
 
+<<<<<<< HEAD
 /* My Story 스타일 */
 .story {
     background: white;
@@ -361,3 +435,5 @@ header {
     border: 2px solid red;
 }
 
+=======
+>>>>>>> origin/develop_KTG

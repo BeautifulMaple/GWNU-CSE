@@ -12,7 +12,11 @@
     <div class="login-container">
         <h1>오레오</h1>
         <!-- 로그인 폼 -->
+<<<<<<< HEAD
         <form id="loginForm" method="post">
+=======
+        <form id="loginForm" method="post" action="{% url 'login' %}">
+>>>>>>> origin/develop_KTG
             {% csrf_token %}
             <div class="input-group">
                 <input type="email" id="email" name="email" placeholder="Email" required>

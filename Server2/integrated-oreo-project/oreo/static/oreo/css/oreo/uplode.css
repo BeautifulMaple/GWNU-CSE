@@ -64,11 +64,16 @@ textarea {
 
 #repPreview {
     width: 100%;
+<<<<<<< HEAD
     max-width: 250px;
+=======
+    max-width: 250px;  /* 최대 크기를 약간 커지도록 */
+>>>>>>> origin/develop_KTG
     height: auto;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-top: 15px;
+<<<<<<< HEAD
     transition: all 0.3s ease;  /* opacity와 display 모두에 대한 전환 효과 */
 }
 
@@ -81,6 +86,13 @@ textarea {
 #repPreview:not(.hidden) {
     display: block;
     opacity: 1;
+=======
+    transition: opacity 0.3s ease;  /* 미리보기 이미지가 서서히 나타나도록 효과 추가 */
+}
+
+#repPreview.hidden {
+    opacity: 0;  /* 숨겨진 상태에서는 투명하게 처리 */
+>>>>>>> origin/develop_KTG
 }
 
 /* 파일 업로드 버튼 스타일 */
