@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 찾기</title>
+    <link rel="stylesheet" href="{% static 'oreo/css/oreo/pwfind.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>비밀번호 찾기</h1>
+        <p>본인확인 이메일로 인증하기</p>
+        <form id="idFindForm" method="post">
+            {% csrf_token %} <!-- CSRF 토큰 추가 -->
+            <input type="text" id="name" placeholder="이름" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="button" id="verificationBtn">인증번호 받기</button>
+            <input type="text" id="verificationCode" placeholder="인증번호 6자리 숫자 입력" required disabled>
+            <button type="button" class="find-btn" id="confirmCodeBtn" disabled>확인</button>
+            <div class="buttons">
+                <button type="button" class="find-btn" id="findIdBtn" data-url="{% url 'resetpassword' %}" disabled>다음</button>
+                <button type="button" id="backBtn" data-url="{% url 'login' %}">뒤로가기</button>
+            </div>
+        </form>
+    </div>
+    <script src="{% static 'oreo/js/oreo/pwfind.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* Basic styling for the upload page */
+.uplode-container {
+    width: 90%;  /* 전체 페이지에서 더 넓은 너비를 사용 */
+    max-width: 600px;  /* 최대 너비 증가 */
+    margin: 30px auto;  /* 상단 여백을 넉넉하게 설정 */
+    padding: 25px;
+    background-color: #fff;  /* 배경색을 흰색으로 설정 */
+    border-radius: 15px;  /* 둥근 모서리 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);  /* 그림자 효과 추가 */
+    text-align: center;
+    font-family: 'Arial', sans-serif;  /* 폰트 설정 */
+}
+
+/* 제목 스타일 */
+h1 {
+    font-size: 28px;  /* 더 큰 제목 크기 */
+    margin-bottom: 20px;
+    color: #333;  /* 글자 색을 어두운 색으로 설정 */
+}
+
+/* 각 항목 레이블 스타일 */
+label {
+    font-size: 18px;
+    display: block;
+    margin-top: 15px;
+    color: #555;  /* 다소 부드러운 색상 사용 */
+}
+
+/* 각 입력 필드와 버튼 스타일 */
+input[type="file"],
+input[type="date"],
+button,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;  /* 패딩과 보더가 전체 너비에 포함되도록 설정 */
+}
+
+button {
+    background-color: #007bff;  /* 파란색 배경 */
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056b3;  /* 호버 시 다크 블루로 변경 */
+}
+
+textarea {
+    height: 120px;  /* 텍스트 영역의 높이를 늘려서 편리하게 작성할 수 있도록 */
+    resize: vertical;  /* 세로로만 크기 조정 가능하도록 설정 */
+}
+
+/* 파일 미리보기 */
+#previewContainer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#repPreview {
+    width: 100%;
+<<<<<<< HEAD
+    max-width: 250px;
+=======
+    max-width: 250px;  /* 최대 크기를 약간 커지도록 */
+>>>>>>> origin/develop_KTG
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 15px;
+<<<<<<< HEAD
+    transition: all 0.3s ease;  /* opacity와 display 모두에 대한 전환 효과 */
+}
+
+#repPreview.hidden {
+    display: none;  /* 완전히 숨김 처리 */
+    opacity: 0;
+}
+
+/* 미리보기가 표시될 때의 스타일 */
+#repPreview:not(.hidden) {
+    display: block;
+    opacity: 1;
+=======
+    transition: opacity 0.3s ease;  /* 미리보기 이미지가 서서히 나타나도록 효과 추가 */
+}
+
+#repPreview.hidden {
+    opacity: 0;  /* 숨겨진 상태에서는 투명하게 처리 */
+>>>>>>> origin/develop_KTG
+}
+
+/* 파일 업로드 버튼 스타일 */
+input[type="file"] {
+    display: none; /* 기본 파일 입력을 숨기고 */
+}
+
+.custom-file-uplode {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #28a745;  /* 녹색 배경 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.custom-file-uplode:hover {
+    background-color: #218838;  /* 호버 시 색상 변경 */
+}
+
+/* 뒤로가기 버튼 스타일 */
+#backBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6c757d;  /* 회색 배경 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#backBtn:hover {
+    background-color: #5a6268;  /* 호버 시 어두운 회색으로 변경 */
+}
