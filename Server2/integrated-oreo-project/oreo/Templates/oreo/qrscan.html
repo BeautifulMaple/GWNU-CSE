@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR 코드 스캐너</title>
+    <link rel="stylesheet" href="{% static 'oreo/css/oreo/qrscan.css' %}">
+</head>
+<body>
+    <div class="scanner-container">
+        <h1>QR코드 스캐너</h1>
+        <p id="explanation">이 기능은 QR 코드를 스캔하기 위해 카메라를 사용합니다.</p>
+        <button id="startScanBtn" class="start-button">QR 스캔 시작</button>
+        <div id="scannerBox" class="scanner-box" style="display: none;">
+            <!-- 비디오가 표시될 영역 -->
+        </div>
+        <button id="backBtn" class="back-button">뒤로가기</button>
+    </div>
+
+    <script src="{% static 'oreo/js/oreo/qrscan.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+</body>
+</html>
