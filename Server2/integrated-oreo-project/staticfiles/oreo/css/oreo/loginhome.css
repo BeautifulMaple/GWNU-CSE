@@ -1,0 +1,276 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.logo a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-buttons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.top-buttons a:hover {
+    color: #007bff;
+}
+
+/* 메인 콘텐츠 스타일 */
+.main-content {
+    padding: 20px;
+    text-align: left;
+}
+
+/* My Album 스타일 */
+.album-gallery, .story-gallery {
+    display: flex;
+    overflow-x: auto; /* 가로 스크롤 허용 */
+    gap: 15px;
+    padding: 10px;
+    scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
+}
+
+.album-gallery::-webkit-scrollbar,
+.story-gallery::-webkit-scrollbar {
+    display: none; /* Chrome, Safari에서 스크롤바 숨기기 */
+}
+
+/* 스크롤바 사용자 정의 */
+.album-gallery::-webkit-scrollbar,
+.story-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.album-gallery::-webkit-scrollbar-thumb,
+.story-gallery::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 4px;
+}
+
+.album-gallery::-webkit-scrollbar-thumb:hover,
+.story-gallery::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+}
+
+.album-item, .story-photo {
+    flex: 0 0 auto; /* 고정 크기와 가로 정렬 */
+    text-align: center;
+}
+
+.album-thumbnail, .story-photo {
+    width: 250px;  /* 메인 사진과 서브 사진 크기 동일 */
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-thumbnail:hover, .story-photo:hover {
+    transform: scale(1.05); /* 확대 효과 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.album-thumbnail.selected {
+    outline: 3px solid #007bff;
+    border-radius: 8px;
+}
+
+.album-date {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* 섹션 제목 스타일 */
+.album-section h2, .story-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+    border-left: 4px solid #007bff;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+/* My Story 영역 스타일 */
+.album-gallery, .story-gallery, .story-data{
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#storyDetails {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.details-box {
+    text-align: left;
+}
+
+.details-date {
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.details-description {
+    color: #333;
+}
+
+/* 하단 메뉴 스타일 */
+.action-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    color: white;
+    z-index: 1000;
+}
+
+.action-menu.hidden {
+    display: none;
+}
+
+.action-menu button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-menu button:hover {
+    background-color: #0056b3;
+}
+
+.action-menu button {
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+
+.main-photo.selected {
+    border: 2px solid #007bff;
+    border-radius: 4px;
+}
+
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .album-gallery, .story-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .album-thumbnail, .story-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .album-section h2, .story-section h2 {
+        font-size: 18px;
+    }
+}
+
+.sub-photo {
+    width: 100px; /* 원하는 너비 */
+    height: 100px; /* 원하는 높이 */
+    object-fit: cover; /* 비율을 맞춰서 사진을 자르기 */
+    margin: 5px; /* 간격 조정 */
+    border-radius: 8px; /* 모서리 둥글게 */
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    header {
+        background-color: #1e1e1e;
+    }
+
+    .album-section h2, .story-section h2 {
+        color: #007bff;
+    }
+
+    #storyDetails {
+        background-color: #1e1e1e;
+        border-color: #444;
+    }
+
+    .action-menu {
+        background-color: #222;
+    }
+}
+
+/* 메인 사진 */
+.main-photo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* 서브 사진 */
+.sub-photo {
+    max-width: 100px;
+    height: auto;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* 서브 사진 컨테이너 */
+.sub-photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+

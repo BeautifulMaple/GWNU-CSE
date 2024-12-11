@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRData - uplode</title>
+    <link rel="stylesheet" href="{% static 'oreo/css/oreo/uplode.css' %}">
+</head>
+<body>
+    <!-- 로그인 상태 확인을 위한 hidden input -->
+    <input type="hidden" id="isAuthenticated" value="{{ user.is_authenticated|lower }}">
+
+    <div class="uplode-container">
+        <h1>파일 업로드</h1>
+        <form id="uplodeForm" method="post" action="{% url 'uplode_photo' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <!-- 대표 사진 미리보기 영역 -->
+            <div id="previewContainer">
+                <p>대표 사진 미리보기:</p>
+                <img id="repPreview" src="" alt="대표 사진 미리보기" class="hidden">
+            </div>
+
+            <!-- 파일 입력 필드들 -->
+            <div class="file-input-group">
+                <label for="repFileInput" class="custom-file-uplode">대표 사진 선택</label>
+                <input type="file" id="repFileInput" name="repFile" accept="image/*" required>
+
+                <label for="fileInput" class="custom-file-uplode">추가 파일 선택</label>
+                <input type="file" id="fileInput" name="files" accept="image/*, video/*" multiple required>
+            </div>
+
+            <!-- 날짜 입력 -->
+            <div class="input-group">
+                <label for="dateInput">날짜:</label>
+                <input type="date" id="dateInput" name="date" required>
+            </div>
+
+            <!-- 설명 입력 -->
+            <div class="input-group">
+                <label for="descriptionInput">사진 설명:</label>
+                <textarea id="descriptionInput" name="description" placeholder="사진 설명을 입력하세요..." required></textarea>
+            </div>
+
+            <!-- 제출 버튼 -->
+            <button type="submit" class="submit-btn">업로드</button>
+        </form>
+
+        <!-- 뒤로가기 버튼 -->
+        <button type="button" id="backBtn" data-url="{% url 'loginhome' %}" class="back-btn">뒤로가기</button>
+    </div>
+
+    <script src="{% static 'oreo/js/oreo/uplode.js' %}"></script>
+</body>
+</html>

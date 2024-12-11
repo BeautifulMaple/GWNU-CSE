@@ -1,0 +1,363 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.logo a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-buttons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.top-buttons a:hover {
+    color: #007bff;
+}
+
+/* 메인 콘텐츠 스타일 */
+.main-content {
+    padding: 20px;
+    text-align: left;
+}
+
+/* My Album 스타일 */
+.album-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+.main-photo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.main-photo:hover {
+    transform: scale(1.05);
+}
+
+/* My Story 스타일 */
+.story {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.story-details {
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.story-date {
+    color: #007bff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.story-description {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.sub-photos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.sub-photo {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.sub-photo:hover {
+    transform: scale(1.05);
+}
+
+/* 섹션 제목 스타일 */
+.album-section h2, .story-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+    border-left: 4px solid #007bff;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+/* My Story 영역 스타일 */
+.album-gallery, .story-gallery, .story-data{
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#storyDetails {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.details-box {
+    text-align: left;
+}
+
+.details-date {
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.details-description {
+    color: #333;
+}
+
+/* 하단 메뉴 스타일 */
+.action-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    color: white;
+    z-index: 1000;
+}
+
+.action-menu.hidden {
+    display: none;
+}
+
+.action-menu button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-menu button:hover {
+    background-color: #0056b3;
+}
+
+.action-menu button {
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+
+.main-photo.selected {
+    border: 2px solid #007bff;
+    border-radius: 4px;
+}
+
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .album-gallery, .story-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .album-thumbnail, .story-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .album-section h2, .story-section h2 {
+        font-size: 18px;
+    }
+}
+
+.sub-photo {
+    width: 100px; /* 원하는 너비 */
+    height: 100px; /* 원하는 높이 */
+    object-fit: cover; /* 비율을 맞춰서 사진을 자르기 */
+    margin: 5px; /* 간격 조정 */
+    border-radius: 8px; /* 모서리 둥글게 */
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    header {
+        background-color: #1e1e1e;
+    }
+
+    .album-section h2, .story-section h2 {
+        color: #007bff;
+    }
+
+    #storyDetails {
+        background-color: #1e1e1e;
+        border-color: #444;
+    }
+
+    .action-menu {
+        background-color: #222;
+    }
+}
+
+/* 메인 사진 */
+.main-photo {
+    max-width: 300px;  /* 최대 너비 제한 */
+    width: 100%;      /* 반응형을 위한 너비 설정 */
+    height: auto;     /* 비율 유지 */
+    margin: 15px auto;  /* 상하 여백과 가운데 정렬 */
+    display: block;   /* 가운데 정렬을 위해 필요 */
+    border-radius: 8px;  /* 모서리 둥글게 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* 그림자 효과 */
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+    .main-photo {
+        max-width: 100%;  /* 모바일에서는 화면 너비에 맞춤 */
+    }
+}
+
+/* 서브 사진 */
+.sub-photo {
+    max-width: 200px;
+    height: auto;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* 서브 사진 컨테이너 */
+.sub-photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* My Story 스타일 */
+.story {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.story-details {
+    padding: 10px;
+    text-align: left;
+}
+
+.story-date {
+    color: #007bff;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.story-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* 서브 사진 확대 스타일 */
+.sub-photo-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.sub-photo-modal-content {
+    margin: 15% auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.photo.selected {
+    border: 2px solid red;
+}
+

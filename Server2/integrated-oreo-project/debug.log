@@ -1,0 +1,258 @@
+Login attempt - Email: xorua4510@gmail.com
+Login successful for email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Login successful for email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Login successful for email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Login successful for email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Login successful for email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Login successful for email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Login successful for email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Login successful for email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Login successful for email: xorua4510@gmail.com
+Invalid JSON data received
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'csrfmiddlewaretoken': ['CqsUz1zAZayd26goGdsYj22DbHKFYPxd4iBO0IJK6R8go3iJBzGw0WWBWgOwZ3zH'], 'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'_auth_user_id': '2', '_auth_user_backend': 'django.contrib.auth.backends.ModelBackend', '_auth_user_hash': 'dbc05dd015f308343d037a08be7dc44e1cae5eab12233a2c91261bccf2b8d78a', 'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+Accessing loginhome - User email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+Accessing loginhome - User email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+Accessing loginhome - User email: xorua4510@gmail.com
+=== Upload Process Start ===
+Files in request: dict_keys(['repFile', 'files'])
+RepFile: 2.jpg
+SubFiles: [<InMemoryUploadedFile: 3.jpg (image/jpeg)>, <InMemoryUploadedFile: 4.jpg (image/jpeg)>]
+Date: 2024-12-11
+Description: test
+User email from session: xorua4510@gmail.com
+Found user profile: xorua4510@gmail.com
+Creating MainPhoto...
+MainPhoto created: 1
+Processing sub photo: 3.jpg
+SubPhoto created: 1
+Processing sub photo: 4.jpg
+SubPhoto created: 2
+=== Upload Process Complete ===
+Accessing loginhome - User email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+Accessing loginhome - User email: xorua4510@gmail.com
+=== Upload Process Start ===
+Files in request: dict_keys(['repFile', 'files'])
+RepFile: 5.jpg
+SubFiles: [<InMemoryUploadedFile: 6.jpg (image/jpeg)>]
+Date: 2024-12-11
+Description: test
+User email from session: xorua4510@gmail.com
+Found user profile: xorua4510@gmail.com
+Creating MainPhoto...
+MainPhoto created: 2
+Processing sub photo: 6.jpg
+SubPhoto created: 3
+=== Upload Process Complete ===
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+=== Upload Process Start ===
+Files in request: dict_keys(['repFile', 'files'])
+RepFile: 1.jpg
+SubFiles: [<InMemoryUploadedFile: 2.jpg (image/jpeg)>]
+Date: 2024-12-11
+Description: test
+User email from session: xorua4510@gmail.com
+Found user profile: xorua4510@gmail.com
+Creating MainPhoto...
+MainPhoto created: 3
+Processing sub photo: 2.jpg
+SubPhoto created: 4
+=== Upload Process Complete ===
+Accessing loginhome - User email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+Accessing loginhome - User email: xorua4510@gmail.com
+=== Upload Process Start ===
+Files in request: dict_keys(['repFile', 'files'])
+RepFile: 1.jpg
+SubFiles: [<InMemoryUploadedFile: 2.jpg (image/jpeg)>]
+Date: 2024-12-11
+Description: ¸¸ ¹ø ¹Ýº¹ Áß...
+
+User email from session: xorua4510@gmail.com
+Found user profile: xorua4510@gmail.com
+Creating MainPhoto...
+MainPhoto created: 4
+Processing sub photo: 2.jpg
+SubPhoto created: 5
+=== Upload Process Complete ===
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+Accessing loginhome - User email: xorua4510@gmail.com
+=== Upload Process Start ===
+Files in request: dict_keys(['repFile', 'files'])
+RepFile: 1.jpg
+SubFiles: [<InMemoryUploadedFile: 3.jpg (image/jpeg)>]
+Date: 2024-12-11
+Description: test
+User email from session: xorua4510@gmail.com
+Found user profile: xorua4510@gmail.com
+Creating MainPhoto...
+MainPhoto created: 5
+Processing sub photo: 3.jpg
+SubPhoto created: 6
+=== Upload Process Complete ===
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+Accessing loginhome - User email: xorua4510@gmail.com
+Error in loginhome_view: no such column: oreo_mainphoto.date
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+Accessing loginhome - User email: xorua4510@gmail.com
+Error in loginhome_view: no such column: oreo_mainphoto.date
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+Accessing loginhome - User email: xorua4510@gmail.com
+Error in loginhome_view: no such column: oreo_mainphoto.date
+Registration attempt - Email: xorua4510@gmail.com
+Original password: 4510
+Hashed password during registration: pbkdf2_sha256$870000$S13bH7zQNdqG51TOr4DXJ0$v/An0F1tZGgUGwGhwxLpPXjjdAZmTnzt6EQ/oyHOiQs=
+User created successfully with email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+Accessing loginhome - User email: xorua4510@gmail.com
+=== Upload Process Start ===
+Files in request: dict_keys(['repFile', 'files'])
+RepFile: 1.jpg
+SubFiles: [<InMemoryUploadedFile: 2.jpg (image/jpeg)>]
+Date: 2024-12-11
+Description: Àú³á ½Ä»ç ÈÄ 
+User email from session: xorua4510@gmail.com
+Found user profile: xorua4510@gmail.com
+Creating MainPhoto...
+MainPhoto created: 1
+Processing sub photo: 2.jpg
+SubPhoto created: 1
+=== Upload Process Complete ===
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+Accessing loginhome - User email: xorua4510@gmail.com
+Accessing loginhome - User email: xorua4510@gmail.com
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+=== Upload Process Start ===
+Files in request: dict_keys(['repFile', 'files'])
+RepFile: 1.jpg
+SubFiles: [<InMemoryUploadedFile: 2.jpg (image/jpeg)>]
+Date: 2024-12-11
+Description: test
+User email from session: xorua4510@gmail.com
+Found user profile: xorua4510@gmail.com
+Creating MainPhoto...
+MainPhoto created: 2
+Processing sub photo: 2.jpg
+SubPhoto created: 2
+=== Upload Process Complete ===
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
+=== Upload Process Start ===
+Files in request: dict_keys(['repFile', 'files'])
+RepFile: 3.jpg
+SubFiles: [<InMemoryUploadedFile: 4.jpg (image/jpeg)>]
+Date: 2024-12-11
+Description: test1
+User email from session: xorua4510@gmail.com
+Found user profile: xorua4510@gmail.com
+Creating MainPhoto...
+MainPhoto created: 3
+Processing sub photo: 4.jpg
+SubPhoto created: 3
+=== Upload Process Complete ===
+=== Upload Process Start ===
+Files in request: dict_keys(['repFile', 'files'])
+RepFile: 5.jpg
+SubFiles: [<InMemoryUploadedFile: 6.jpg (image/jpeg)>]
+Date: 2024-12-11
+Description: test2
+User email from session: xorua4510@gmail.com
+Found user profile: xorua4510@gmail.com
+Creating MainPhoto...
+MainPhoto created: 4
+Processing sub photo: 6.jpg
+SubPhoto created: 4
+=== Upload Process Complete ===
+=== Upload Process Start ===
+Files in request: dict_keys(['repFile', 'files'])
+RepFile: 4.jpg
+SubFiles: [<InMemoryUploadedFile: 5.jpg (image/jpeg)>]
+Date: 2024-12-11
+Description: test1
+User email from session: xorua4510@gmail.com
+Found user profile: xorua4510@gmail.com
+Creating MainPhoto...
+MainPhoto created: 5
+Processing sub photo: 5.jpg
+SubPhoto created: 5
+=== Upload Process Complete ===
+Login attempt - Email: xorua4510@gmail.com
+Request POST data: <QueryDict: {'email': ['xorua4510@gmail.com'], 'password': ['4510']}>
+Login successful - Email: xorua4510@gmail.com
+Session data: {'user_email': 'xorua4510@gmail.com', 'user_nickname': '´ÜÇ³', 'is_authenticated': True}
